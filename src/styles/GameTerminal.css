@@ -1,0 +1,57 @@
+/* Game Terminal Styles */
+
+.game-terminal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  font-family: 'Courier New', monospace;
+  color: #00ff88;
+  overflow: hidden;
+}
+
+.terminal-lines {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 500px;
+}
+
+.terminal-line {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+  word-break: break-all;
+  opacity: 0.15;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .terminal-lines {
+    top: 1rem;
+    left: 1rem;
+    max-width: 300px;
+  }
+
+  .terminal-line {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .terminal-lines {
+    top: 0.5rem;
+    left: 0.5rem;
+    max-width: 200px;
+  }
+
+  .terminal-line {
+    font-size: 0.6rem;
+  }
+}
