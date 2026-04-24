@@ -4,7 +4,7 @@ import '../styles/Hero.css';
 
 function Hero() {
   const [displayText, setDisplayText] = useState('');
-  const fullText = '> JUNIOR TESTER // BUG FINDER // QUALITY ADVOCATE';
+  const fullText = '⚔️ DUNGEON TESTER // BUG SLAYER // QUALITY GUARDIAN ⚔️';
 
   useEffect(() => {
     let index = 0;
@@ -19,6 +19,13 @@ function Hero() {
     return () => clearInterval(interval);
   }, []);
 
+  const handleStartGame = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section className="hero">
       <motion.div
@@ -27,17 +34,15 @@ function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div className="terminal-window">
-          <div className="terminal-header">
-            <span className="terminal-button red"></span>
-            <span className="terminal-button yellow"></span>
-            <span className="terminal-button green"></span>
+        <div className="dungeon-window">
+          <div className="dungeon-header">
+            <span className="dungeon-title">⚔️ ADVENTURER'S STATUS ⚔️</span>
           </div>
-          <div className="terminal-content">
+          <div className="dungeon-content">
             <div className="hero-text">
-              <motion.h1 className="typing-text">
+              <motion.h1 className="pixel-text">
                 {displayText}
-                <span className="cursor">|</span>
+                <span className="cursor">█</span>
               </motion.h1>
             </div>
           </div>
@@ -50,18 +55,26 @@ function Hero() {
             transition={{ delay: 2, duration: 0.8 }}
             className="level-text"
           >
-            🚀 LEVEL: Junior || EXPERIENCE: 1+ Years 🎮
+            ⚡ LEVEL: Junior || EXPERIENCE: 1+ Years ⚡
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 2.5, duration: 0.8 }}
+            className="stats-text"
+          >
+            🛡️ HP: 100 | 💪 ATK: 85 | 🧠 INT: 95 | ❤️ LUK: 90
           </motion.p>
         </div>
 
         <motion.div
-          className="cta-button"
-          whileHover={{ scale: 1.05, boxShadow: '0 0 20px #00ff88' }}
+          className="start-button-container"
+          whileHover={{ scale: 1.1, boxShadow: '0 0 20px #ff6b00' }}
           whileTap={{ scale: 0.95 }}
         >
-          <a href="#projects" className="start-button">
-            [START GAME]
-          </a>
+          <button onClick={handleStartGame} className="start-button">
+            [▶ ENTER DUNGEON ◀]
+          </button>
         </motion.div>
 
         <div className="animated-background">

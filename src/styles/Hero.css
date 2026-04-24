@@ -1,4 +1,6 @@
-/* Hero Section Styles */
+/* Hero Section Styles - Pixel RPG Dungeon Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 .hero {
   min-height: 100vh;
@@ -8,7 +10,8 @@
   padding: 100px 2rem 3rem;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #0a0e27 0%, #1a0f35 50%, #0a0e27 100%);
+  background: linear-gradient(135deg, #1a1410 0%, #2a2015 50%, #1a1410 100%);
+  background-attachment: fixed;
 }
 
 .hero::before {
@@ -16,7 +19,7 @@
   position: absolute;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(0, 255, 136, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 107, 0, 0.2) 0%, transparent 70%);
   top: -100px;
   right: -100px;
   animation: float 6s ease-in-out infinite;
@@ -27,7 +30,7 @@
   position: absolute;
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(210, 105, 30, 0.2) 0%, transparent 70%);
   bottom: -50px;
   left: -50px;
   animation: float 8s ease-in-out infinite 1s;
@@ -41,86 +44,89 @@
   text-align: center;
 }
 
-.terminal-window {
-  background: linear-gradient(135deg, #0f1535 0%, #1a1f4a 100%);
-  border: 2px solid #00ff88;
-  border-radius: 10px;
+.dungeon-window {
+  background: linear-gradient(135deg, #3d2817 0%, #2a1f14 100%);
+  border: 4px solid #ff6b00;
+  border-radius: 0;
   box-shadow: 
-    0 0 30px rgba(0, 255, 136, 0.3),
-    inset 0 0 30px rgba(0, 255, 136, 0.05);
+    0 0 40px rgba(255, 107, 0, 0.4),
+    inset 0 0 30px rgba(255, 107, 0, 0.1),
+    0 8px 0 0 rgba(0, 0, 0, 0.5);
   overflow: hidden;
   margin-bottom: 2rem;
+  position: relative;
 }
 
-.terminal-header {
-  background: #1a1f4a;
+.dungeon-window::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.1) 0px,
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.dungeon-header {
+  background: linear-gradient(135deg, #4a3423 0%, #3d2817 100%);
   padding: 1rem;
   display: flex;
   gap: 10px;
-  border-bottom: 1px solid #00ff88;
+  border-bottom: 3px solid #ff6b00;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.3);
 }
 
-.terminal-button {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.dungeon-title {
+  color: #ff6b00;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
+  letter-spacing: 2px;
+  flex: 1;
 }
 
-.terminal-button.red {
-  background: #ff5f56;
-}
-
-.terminal-button.red:hover {
-  box-shadow: 0 0 10px rgba(255, 95, 86, 0.5);
-}
-
-.terminal-button.yellow {
-  background: #ffbd2e;
-}
-
-.terminal-button.yellow:hover {
-  box-shadow: 0 0 10px rgba(255, 189, 46, 0.5);
-}
-
-.terminal-button.green {
-  background: #27c93f;
-}
-
-.terminal-button.green:hover {
-  box-shadow: 0 0 10px rgba(39, 201, 63, 0.5);
-}
-
-.terminal-content {
+.dungeon-content {
   padding: 2rem;
-  font-family: 'Courier New', monospace;
+  font-family: 'Press Start 2P', cursive;
   min-height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-text {
   width: 100%;
 }
 
-.typing-text {
-  font-size: 2rem;
-  color: #00ff88;
-  text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
-  letter-spacing: 2px;
-  line-height: 1.4;
+.pixel-text {
+  font-size: 1.3rem;
+  color: #ff6b00;
+  text-shadow: 
+    3px 3px 0 rgba(0, 0, 0, 0.8),
+    6px 6px 0 rgba(0, 0, 0, 0.5);
+  letter-spacing: 3px;
+  line-height: 1.6;
   font-weight: bold;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .cursor {
   display: inline-block;
-  width: 3px;
-  height: 2rem;
-  background: #00ff88;
-  margin-left: 5px;
+  color: #ff6b00;
   animation: blink 0.7s infinite;
+  text-shadow: 0 0 10px rgba(255, 107, 0, 0.8);
 }
 
 @keyframes blink {
@@ -137,40 +143,60 @@
 }
 
 .level-text {
-  font-size: 1.1rem;
-  color: #00d4ff;
-  text-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+  font-size: 0.9rem;
+  color: #ffaa00;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
   letter-spacing: 1px;
   font-weight: bold;
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 0.5rem;
 }
 
-.cta-button {
+.stats-text {
+  font-size: 0.75rem;
+  color: #ff6b00;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
+  letter-spacing: 1px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.start-button-container {
   margin: 2rem 0 0 0;
 }
 
 .start-button {
   display: inline-block;
-  padding: 1rem 3rem;
-  background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
-  color: #0a0e27;
+  padding: 1.2rem 2.5rem;
+  background: linear-gradient(135deg, #ff6b00 0%, #ff8c00 100%);
+  color: #1a1410;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  border-radius: 5px;
-  font-size: 1.1rem;
-  border: 2px solid #00ff88;
+  letter-spacing: 3px;
+  border: 4px solid #4a3423;
+  font-size: 0.9rem;
+  font-family: 'Press Start 2P', cursive;
   transition: all 0.3s ease;
-  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  box-shadow: 
+    0 8px 0 0 rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(255, 107, 0, 0.4);
   cursor: pointer;
+  position: relative;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
 
 .start-button:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 
+    0 11px 0 0 rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(255, 107, 0, 0.6);
+  background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%);
 }
 
 .start-button:active {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
+  box-shadow: 
+    0 9px 0 0 rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(255, 107, 0, 0.4);
 }
 
 .animated-background {
@@ -186,13 +212,13 @@
   position: absolute;
   border-radius: 50%;
   filter: blur(40px);
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
 .orb-1 {
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(0, 255, 136, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 107, 0, 0.3) 0%, transparent 70%);
   top: 10%;
   right: 10%;
   animation: float 8s ease-in-out infinite;
@@ -201,7 +227,7 @@
 .orb-2 {
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(0, 212, 255, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(210, 105, 30, 0.3) 0%, transparent 70%);
   bottom: 20%;
   left: 5%;
   animation: float 10s ease-in-out infinite 2s;
@@ -210,11 +236,20 @@
 .orb-3 {
   width: 250px;
   height: 250px;
-  background: radial-gradient(circle, rgba(255, 0, 110, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 140, 0, 0.2) 0%, transparent 70%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   animation: float 12s ease-in-out infinite 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 /* Responsive */
@@ -224,21 +259,22 @@
     padding: 80px 1rem 2rem;
   }
 
-  .typing-text {
-    font-size: 1.5rem;
+  .pixel-text {
+    font-size: 1rem;
   }
 
   .cursor {
-    height: 1.5rem;
+    font-size: 1rem;
   }
 
   .start-button {
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    font-size: 0.7rem;
   }
 
-  .level-text {
-    font-size: 1rem;
+  .level-text,
+  .stats-text {
+    font-size: 0.7rem;
   }
 }
 
