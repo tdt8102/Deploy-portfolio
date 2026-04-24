@@ -31,7 +31,7 @@ function Navigation({ muted, setMuted }) {
       >
         <div className="logo">
           <span className="logo-bracket">[</span>
-          <span className="logo-text">TẠ ĐĂNG THẢO</span>
+          <span className="logo-text">TA DANG THAO</span>
           <span className="logo-bracket">]</span>
         </div>
 
