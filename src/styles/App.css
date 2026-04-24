@@ -5,19 +5,21 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 :root {
-  --primary-color: #00ff88;
-  --secondary-color: #ff006e;
-  --accent-color: #00d4ff;
-  --bg-dark: #0a0e27;
-  --bg-darker: #050810;
-  --bg-card: #0f1535;
+  --primary-color: #ff6b00;
+  --secondary-color: #ffaa00;
+  --accent-color: #8B4513;
+  --bg-dark: #1a1410;
+  --bg-darker: #0f0a07;
+  --bg-card: #3d2817;
   --text-primary: #ffffff;
-  --text-secondary: #a0aec0;
-  --border-color: #1a2f4f;
-  --neon-green: #00ff88;
-  --neon-pink: #ff006e;
-  --neon-cyan: #00d4ff;
+  --text-secondary: #d4b5a0;
+  --border-color: #ff6b00;
+  --dungeon-orange: #ff6b00;
+  --dungeon-yellow: #ffaa00;
+  --dungeon-brown: #8B4513;
 }
 
 html {
@@ -25,7 +27,7 @@ html {
 }
 
 body {
-  font-family: 'Courier New', 'Courier', monospace;
+  font-family: 'Press Start 2P', 'Courier New', 'Courier', monospace;
   background: var(--bg-dark);
   color: var(--text-primary);
   line-height: 1.6;
@@ -35,9 +37,10 @@ body {
 .app-container {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--bg-dark) 0%, #0f1a35 100%);
+  background: linear-gradient(135deg, #1a1410 0%, #2a2015 100%);
   position: relative;
   overflow: hidden;
+  background-attachment: fixed;
 }
 
 .app-container::before {
@@ -48,9 +51,9 @@ body {
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 20% 50%, rgba(0, 255, 136, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 40% 20%, rgba(255, 0, 110, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(255, 107, 0, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(210, 105, 30, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(255, 170, 0, 0.05) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
@@ -68,18 +71,19 @@ section {
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   text-align: center;
   margin: 3rem 0 2rem;
-  color: var(--neon-green);
-  text-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
-  letter-spacing: 2px;
+  color: var(--dungeon-orange);
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.8);
+  letter-spacing: 3px;
   text-transform: uppercase;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .title-bracket {
-  color: var(--accent-color);
+  color: var(--dungeon-yellow);
   font-weight: bold;
   margin: 0 10px;
 }
@@ -131,13 +135,13 @@ section {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--neon-green), var(--neon-cyan));
-  border-radius: 6px;
+  background: linear-gradient(180deg, var(--dungeon-orange), var(--dungeon-yellow));
+  border-radius: 0;
   border: 2px solid var(--bg-darker);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, var(--neon-pink), var(--neon-green));
+  background: linear-gradient(180deg, var(--dungeon-yellow), var(--dungeon-orange));
 }
 
 /* Responsive Design */

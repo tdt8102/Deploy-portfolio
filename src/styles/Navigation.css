@@ -1,15 +1,17 @@
-/* Navigation Styles */
+/* Navigation Styles - Pixel RPG Dungeon Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(180deg, rgb(10, 14, 39) 0%, rgba(10, 14, 39, 0.95) 100%);
+  background: linear-gradient(180deg, rgb(26, 20, 16) 0%, rgba(26, 20, 16, 0.95) 100%);
   backdrop-filter: blur(10px);
-  border-bottom: 2px solid rgba(0, 255, 136, 0.2);
+  border-bottom: 4px solid #ff6b00;
   z-index: 1000;
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 .nav-container {
@@ -24,32 +26,34 @@
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: bold;
-  color: #00ff88;
-  text-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+  color: #ff6b00;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
   letter-spacing: 2px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .logo:hover {
-  text-shadow: 0 0 25px rgba(0, 255, 136, 0.8);
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.8);
   transform: scale(1.05);
+  color: #ffaa00;
 }
 
 .logo-bracket {
-  color: #00d4ff;
+  color: #ffaa00;
   animation: pulse 2s infinite;
 }
 
 .logo-text {
   display: inline-block;
-  background: linear-gradient(90deg, #00ff88, #00d4ff);
+  background: linear-gradient(90deg, #ff6b00, #ffaa00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  Animation: glow 2s infinite;
+  animation: glow 2s infinite;
 }
 
 .nav-menu {
@@ -64,8 +68,8 @@
 }
 
 .nav-link {
-  color: #a0aec0;
-  font-size: 1rem;
+  color: #d4b5a0;
+  font-size: 0.75rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -74,11 +78,12 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 500;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .nav-link:hover {
-  color: #00ff88;
-  text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+  color: #ff6b00;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
 }
 
 .nav-link::after {
@@ -87,8 +92,8 @@
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #00ff88, #00d4ff);
+  height: 3px;
+  background: linear-gradient(90deg, #ff6b00, #ffaa00);
   transition: width 0.3s ease;
 }
 
@@ -97,19 +102,21 @@
 }
 
 .sound-toggle {
-  background: rgba(0, 255, 136, 0.1);
-  border: 2px solid #00ff88;
+  background: #ff6b00;
+  border: 3px solid #4a3423;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+  border-radius: 0;
   cursor: pointer;
   font-size: 1.2rem;
   transition: all 0.3s ease;
-  color: #00ff88;
+  color: #1a1410;
+  font-weight: bold;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.5);
 }
 
 .sound-toggle:hover {
-  background: rgba(0, 255, 136, 0.2);
-  box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+  background: #ffaa00;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 107, 0, 0.4);
   transform: scale(1.05);
 }
 
@@ -125,9 +132,9 @@
 .menu-toggle span {
   width: 25px;
   height: 3px;
-  background: #00ff88;
+  background: #ff6b00;
   margin: 5px 0;
-  border-radius: 2px;
+  border-radius: 0;
   transition: all 0.3s ease;
 }
 
@@ -161,9 +168,9 @@
     width: 100%;
     flex-direction: column;
     gap: 0;
-    background: linear-gradient(180deg, rgb(15, 21, 53) 0%, rgb(10, 14, 39) 100%);
-    border-top: 2px solid rgba(0, 255, 136, 0.2);
-    border-bottom: 2px solid rgba(0, 255, 136, 0.2);
+    background: linear-gradient(180deg, rgb(61, 40, 23) 0%, rgb(26, 20, 16) 100%);
+    border-top: 3px solid #ff6b00;
+    border-bottom: 3px solid #ff6b00;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
@@ -175,7 +182,7 @@
 
   .nav-menu li {
     width: 100%;
-    border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+    border-bottom: 2px solid #ff6b00;
   }
 
   .nav-link {
@@ -183,10 +190,11 @@
     width: 100%;
     padding: 1rem;
     text-align: left;
+    font-size: 0.7rem;
   }
 
   .logo {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .sound-toggle {

@@ -1,10 +1,11 @@
-/* Technologies Section Styles */
+/* Technologies Section Styles - Pixel RPG Dungeon Theme */
 
 .technologies {
   padding: 5rem 2rem;
-  background: linear-gradient(135deg, #0f1535 0%, #1a0f35 100%);
+  background: linear-gradient(135deg, #1a1410 0%, #2a2015 100%);
   position: relative;
   overflow: hidden;
+  background-attachment: fixed;
 }
 
 .technologies::after {
@@ -15,7 +16,7 @@
   transform: translateX(-50%);
   width: 600px;
   height: 400px;
-  background: radial-gradient(circle, rgba(0, 255, 136, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 107, 0, 0.08) 0%, transparent 70%);
   filter: blur(40px);
   animation: float 12s ease-in-out infinite;
   z-index: 0;
@@ -36,13 +37,14 @@
 }
 
 .tech-category {
-  background: linear-gradient(135deg, rgba(15, 21, 53, 0.8) 0%, rgba(26, 15, 53, 0.8) 100%);
-  border: 2px solid #00d4ff;
-  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(61, 40, 23, 0.8) 0%, rgba(74, 52, 35, 0.8) 100%);
+  border: 3px solid #ff6b00;
+  border-radius: 0;
   padding: 2rem;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.5);
 }
 
 .tech-category::before {
@@ -52,7 +54,7 @@
   left: -100%;
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(0, 255, 136, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 107, 0, 0.2) 0%, transparent 70%);
   filter: blur(40px);
   transition: all 0.5s ease;
   z-index: 0;
@@ -64,22 +66,23 @@
 }
 
 .tech-category:hover {
-  border-color: #00ff88;
+  border-color: #ffaa00;
   transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.5), 0 10px 20px rgba(255, 107, 0, 0.3);
 }
 
 .category-title {
-  font-size: 1.4rem;
-  color: #00ff88;
+  font-size: 1.2rem;
+  color: #ffaa00;
   margin-bottom: 1.5rem;
-  text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
   font-weight: bold;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   position: relative;
   z-index: 1;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .category-icon {

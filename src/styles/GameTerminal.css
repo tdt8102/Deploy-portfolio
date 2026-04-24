@@ -1,4 +1,4 @@
-/* Game Terminal Styles */
+/* Game Terminal Styles - Pixel RPG Dungeon Theme */
 
 .game-terminal {
   position: fixed;
@@ -8,8 +8,8 @@
   height: 100%;
   pointer-events: none;
   z-index: -1;
-  font-family: 'Courier New', monospace;
-  color: #00ff88;
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  color: #ff6b00;
   overflow: hidden;
 }
 
@@ -24,11 +24,11 @@
 }
 
 .terminal-line {
-  font-size: 0.75rem;
-  letter-spacing: 1px;
-  text-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
   word-break: break-all;
-  opacity: 0.15;
+  opacity: 0.1;
 }
 
 /* Responsive */

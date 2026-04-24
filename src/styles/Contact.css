@@ -1,10 +1,11 @@
-/* Contact Section Styles */
+/* Contact Section Styles - Pixel RPG Dungeon Theme */
 
 .contact {
   padding: 5rem 2rem;
-  background: linear-gradient(135deg, #0a0e27 0%, #0f1535 100%);
+  background: linear-gradient(135deg, #1a1410 0%, #2a2015 100%);
   position: relative;
   overflow: hidden;
+  background-attachment: fixed;
 }
 
 .contact::before {
@@ -14,7 +15,7 @@
   right: -100px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(0, 255, 136, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 107, 0, 0.08) 0%, transparent 70%);
   filter: blur(40px);
   animation: float 8s ease-in-out infinite;
   z-index: 0;
@@ -27,7 +28,7 @@
   left: -100px;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(0, 212, 255, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(210, 105, 30, 0.08) 0%, transparent 70%);
   filter: blur(40px);
   animation: float 10s ease-in-out infinite 1s;
   z-index: 0;
@@ -55,16 +56,17 @@
 }
 
 .info-title {
-  font-size: 1.8rem;
-  color: #00ff88;
-  text-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+  font-size: 1.6rem;
+  color: #ff6b00;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
   font-weight: bold;
   letter-spacing: 2px;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .info-text {
-  color: #a0aec0;
-  font-size: 1.05rem;
+  color: #d4b5a0;
+  font-size: 0.9rem;
   line-height: 1.8;
 }
 
@@ -79,20 +81,22 @@
   align-items: center;
   gap: 1.5rem;
   padding: 1.5rem;
-  background: linear-gradient(135deg, rgba(0, 255, 136, 0.1) 0%, rgba(0, 212, 255, 0.1) 100%);
-  border: 2px solid #00d4ff;
-  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(255, 107, 0, 0.15) 0%, rgba(210, 105, 30, 0.15) 100%);
+  border: 3px solid #ff6b00;
+  border-radius: 0;
   transition: all 0.3s ease;
-  color: #a0aec0;
+  color: #d4b5a0;
   text-decoration: none;
   cursor: pointer;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.5);
 }
 
 .contact-link:hover {
-  border-color: #00ff88;
-  background: linear-gradient(135deg, rgba(0, 255, 136, 0.15) 0%, rgba(0, 212, 255, 0.15) 100%);
+  border-color: #ffaa00;
+  background: linear-gradient(135deg, rgba(255, 107, 0, 0.25) 0%, rgba(210, 105, 30, 0.25) 100%);
   transform: translateX(10px);
-  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.5), 0 10px 20px rgba(255, 107, 0, 0.3);
+  color: #ffffff;
 }
 
 .contact-icon {

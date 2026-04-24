@@ -1,10 +1,11 @@
-/* About Section Styles */
+/* About Section Styles - Pixel RPG Dungeon Theme */
 
 .about {
   padding: 5rem 2rem;
-  background: linear-gradient(135deg, #0a0e27 0%, #1a0f35 100%);
+  background: linear-gradient(135deg, #1a1410 0%, #2a2015 100%);
   position: relative;
   overflow: hidden;
+  background-attachment: fixed;
 }
 
 .about::before {
@@ -15,7 +16,7 @@
   transform: translateX(-50%);
   width: 600px;
   height: 400px;
-  background: radial-gradient(circle, rgba(0, 255, 136, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 107, 0, 0.08) 0%, transparent 70%);
   filter: blur(40px);
   animation: float 10s ease-in-out infinite;
   z-index: 0;
@@ -42,25 +43,26 @@
 }
 
 .intro-text {
-  font-size: 1.5rem;
-  color: #00ff88;
-  text-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
+  font-size: 1.2rem;
+  color: #ff6b00;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
   font-weight: bold;
   animation: pulse 2s infinite;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .about-description {
-  color: #a0aec0;
-  font-size: 1.05rem;
+  color: #d4b5a0;
+  font-size: 0.9rem;
   line-height: 1.8;
-  border-left: 3px solid #00d4ff;
+  border-left: 4px solid #ff6b00;
   padding-left: 1.5rem;
   transition: all 0.3s ease;
 }
 
 .about-description:hover {
   color: #ffffff;
-  border-left-color: #00ff88;
+  border-left-color: #ffaa00;
   padding-left: 2rem;
 }
 
@@ -73,17 +75,18 @@
 }
 
 .skill-list li {
-  color: #00ff88;
+  color: #ffaa00;
   padding-left: 1.5rem;
   position: relative;
   font-weight: 500;
+  font-size: 0.85rem;
 }
 
 .skill-list li::before {
-  content: '▶';
+  content: '⚔️';
   position: absolute;
   left: 0;
-  color: #00d4ff;
+  color: #ff6b00;
 }
 
 .about-stats {
@@ -93,15 +96,16 @@
 }
 
 .stat-card {
-  background: linear-gradient(135deg, rgba(0, 255, 136, 0.1) 0%, rgba(0, 212, 255, 0.1) 100%);
-  border: 2px solid #00ff88;
-  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(255, 107, 0, 0.15) 0%, rgba(210, 105, 30, 0.15) 100%);
+  border: 3px solid #ff6b00;
+  border-radius: 0;
   padding: 2rem;
   text-align: center;
   transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.5);
 }
 
 .stat-card::before {
@@ -111,14 +115,14 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 107, 0, 0.2), transparent);
   transition: left 0.5s ease;
 }
 
 .stat-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
-  border-color: #00d4ff;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.5), 0 10px 20px rgba(255, 107, 0, 0.3);
+  border-color: #ffaa00;
 }
 
 .stat-card:hover::before {
@@ -127,19 +131,21 @@
 
 .stat-label {
   display: block;
-  color: #a0aec0;
-  font-size: 0.9rem;
+  color: #d4b5a0;
+  font-size: 0.7rem;
   letter-spacing: 1px;
   margin-bottom: 0.8rem;
   text-transform: uppercase;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .stat-value {
   display: block;
-  color: #00ff88;
-  font-size: 2.5rem;
+  color: #ff6b00;
+  font-size: 2rem;
   font-weight: bold;
-  text-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
+  font-family: 'Press Start 2P', cursive;
 }
 
 /* Responsive */
