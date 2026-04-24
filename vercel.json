@@ -1,7 +1,7 @@
 {
   "buildCommand": "npm run build",
-  "devCommand": "npm start",
-  "outputDirectory": "build",
-  "env": {},
-  "regions": ["sfo1"]
+  "devCommand": "npm run dev",
+  "outputDirectory": "dist",
+  "regions": ["sfo1"],
+  "env": {}
 }
